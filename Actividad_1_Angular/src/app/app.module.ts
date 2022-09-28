@@ -5,16 +5,22 @@ import { MaterialImportsModule } from './material-imports/material-imports.modul
 
 
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
+import { FormularioComponent } from './components/formulario/formulario.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FormularioComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialImportsModule
+    MaterialImportsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
