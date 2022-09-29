@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { HeaderComponent } from './components/header/header.component';
+import { DarkModeComponent } from './components/dark-mode/dark-mode.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FormularioComponent,
-    HeaderComponent
+    HeaderComponent,
+    DarkModeComponent
   ],
   imports: [
     BrowserModule,
