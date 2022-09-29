@@ -2,7 +2,7 @@
 <div id="contenido">
   <mat-form-field appearance="fill">
     <mat-label>Nombre</mat-label>
-    <input matInput [(ngModel)]="nombre" required/>
+    <input matInput [(ngModel)]="nombre" required />
   </mat-form-field>
 
   <mat-form-field appearance="fill">
@@ -12,7 +12,7 @@
 
   <mat-form-field appearance="fill">
     <mat-label>NIF</mat-label>
-    <input matInput maxlength="9" [(ngModel)]="nif" required/>
+    <input matInput maxlength="9" [(ngModel)]="nif" required />
   </mat-form-field>
 
   <mat-form-field appearance="fill">
@@ -24,7 +24,6 @@
       required
       [(ngModel)]="email"
     />
-   
   </mat-form-field>
 
   <mat-form-field appearance="fill">
@@ -41,19 +40,16 @@
     </mat-select>
   </mat-form-field>
   <mat-label>Sexo</mat-label>
-  <br>
+  <br />
   <mat-radio-group [(ngModel)]="sexo" aria-label="Select an option">
-    
-    <mat-radio-button value="Masculino">Masculino</mat-radio-button><br>
+    <mat-radio-button value="Masculino">Masculino</mat-radio-button><br />
 
     <mat-radio-button value="Femenino">Femenino</mat-radio-button>
   </mat-radio-group>
-  <br>
-  <mat-checkbox [(ngModel)]="aceptar">Aceptar términos y condiciones del registro</mat-checkbox>
-  <br>
-  <input type="button" value="Registrarse" (click)= "mostrarInfo()" />
+  <br />
+  <mat-checkbox [(ngModel)]="aceptar"
+    >Aceptar términos y condiciones del registro</mat-checkbox
+  >
+  <br />
+  <input type="button" value="Registrarse" (click)="mostrarInfo()" />
 </div>
-
-
-
-
