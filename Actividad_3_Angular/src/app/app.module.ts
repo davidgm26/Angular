@@ -5,13 +5,11 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialImportsModule } from './modulos/material-imports.module';
 import { HeaderComponent } from './Components/header/header.component';
-import { BodyComponent } from './Components/body/body.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    BodyComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
