@@ -1,0 +1,36 @@
+<!--
+<li *ngFor="let profe of listadoProfes ; let i = index">
+    {{(i+1)}} :  {{profe.name}} - {{profe.modulo}}
+ </li>
+-->
+<div mat-subheader>Profesores</div>
+<table *ngFor="let profe of listadoProfes">
+<td>{{profe.name}}</td>
+<td>{{ profe.modulo }}</td>
+<td>{{ profe.sexo }}</td>
+<td> <mat-icon aria-hidden="false" aria-label="Examplez icon">{{ profe.sexo == 'Masculino' ? "male" : "female"   }}</mat-icon></td>
+<td>{{ profe.edad }}</td>
+<span>
+    <div *ngIf="profe.edad > 40; else menorCuarenta">
+
+        <p>Tienes más años que Fernando Jerez en el colegio</p>
+
+       
+    </div>
+    <ng-template #menorCuarenta>Todavía te faltan playbacks</ng-template>
+</span>
+</table>    
+
+<!-- 
+<mat-list-item *ngFor="let profe of listadoProfes">
+  <mat-icon mat-list-icon>person</mat-icon>
+  <div mat-line>{{ profe.name }}</div>
+  <div mat-line>{{ profe.modulo }}</div>
+  <div mat-line>{{ profe.sexo }}</div>
+  <span>
+    <mat-icon aria-hidden="false" aria-label="Example home icon">{{ profe.sexo == 'Masculino' ? "male" : "female"   }}</mat-icon>
+  </span>
+  <div mat-line>{{ profe.edad }}</div>
+</mat-list-item>
+
+-->
