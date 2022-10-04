@@ -1,1 +1,5 @@
-<p>comida works!</p>
+<p *ngFor="let comida of listaComida">
+    {{comida}}
+</p>
+<input type="text" [(ngModel)]="busqueda">
+<input type="button" (click)="buscar(busqueda)">
