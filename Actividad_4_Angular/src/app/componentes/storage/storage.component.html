@@ -1,0 +1,8 @@
+<div id="form-save">
+  <mat-form-field appearance="legacy">
+    <mat-label>Dato a guardar</mat-label>
+    <input matInput placeholder="dato " [(ngModel)]="localData"/>
+    <mat-hint>Escribe un dato</mat-hint>
+  </mat-form-field>&nbsp;
+  <button mat-raised-button color="primary" (click)="guardar()">Guardar</button>
+</div>
