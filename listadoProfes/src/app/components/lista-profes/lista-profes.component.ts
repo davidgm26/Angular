@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Profesores_fake } from '../models/fake_data';
+import { Profesores_fake } from '../../models/fake_data';
 
 /*
 export interface listadoProfes {
