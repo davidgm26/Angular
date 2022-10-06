@@ -5,6 +5,12 @@
     margin: 8px;
 }
 
+
 #tittle{
     text-align: center;
+}
+
+#contenedor{
+  max-width: 50%;
+  max-height: 50%;
 }

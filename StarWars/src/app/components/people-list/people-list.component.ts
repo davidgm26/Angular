@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Film } from 'src/app/interfaces/filmsResponse.interfaces';
 import { People } from 'src/app/interfaces/peopleResponse.interface';
 import { PeopleService } from 'src/app/services/people.service';
 
@@ -8,18 +9,30 @@ import { PeopleService } from 'src/app/services/people.service';
   styleUrls: ['./people-list.component.css'],
 })
 export class PeopleListComponent implements OnInit {
+
+
   peopleList: People[] = [];
 
-  constructor(private peopleService: PeopleService) {}
+  listadoPeliculas: Film[] = [];
+
+  constructor(
+    private peopleService: PeopleService,
+
+    ) {}
 
   ngOnInit(): void {
-    this.peopleService.getPeopleList().subscribe((resp) => {
+    this.peopleService.peopleList().subscribe((resp) => {
       this.peopleList = resp.results;
     });
+    this.peopleService.filmList().subscribe((resp => {
+      this.listadoPeliculas = resp.results
+    }))
   }
+
   public getPhotoURL(p: People): String {
     return `https://starwars-visualguide.com/assets/img/characters/${
-      p.url.split('/')[5]}.jpg`;
+      p.url.split('/')[5]
+    }.jpg`;
   }
 
 }

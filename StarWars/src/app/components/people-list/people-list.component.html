@@ -1,6 +1,6 @@
-<h1>Personajes de Star Wars</h1>
-
-<mat-card class="carta" *ngFor="let people of peopleList">
+<h1 id="tittle">Personajes de Star Wars</h1>
+<div id="contenedor">
+  <mat-card class="carta" *ngFor="let people of peopleList">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>{{people.name}}</mat-card-title>
@@ -8,9 +8,13 @@
     </mat-card-header>
     <img mat-card-image [src]="getPhotoURL(people)" alt="Photo of a Shiba Inu">
     <mat-card-content>
-      <p></p>
+      <div *ngFor="let pelicula of listadoPeliculas">
+        <div *ngIf="pelicula.characters.includes(people.url)">
+        <p>{{pelicula.title}}</p>
+        </div>
+      </div>
     </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>Peliculas</button>
-    </mat-card-actions>
   </mat-card>
+</div>
+
+
