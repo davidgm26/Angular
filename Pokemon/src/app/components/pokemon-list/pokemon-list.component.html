@@ -1,1 +1,12 @@
-<p>pokemon-list works!</p>
+<h1 id="tittle">Pokedex</h1>
+<mat-card class="carta" *ngFor="let pokemon of listadoPokemon">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <img mat-card-image [src]="getPhotoURL(pokemon)"   alt="Photo of a Shiba Inu">
+    </mat-card-header>
+
+    <mat-card-title>{{pokemon.name}}</mat-card-title>
+    <mat-card-content>
+      <p></p>
+    </mat-card-content>
+  </mat-card>
