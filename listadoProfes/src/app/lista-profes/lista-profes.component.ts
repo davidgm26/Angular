@@ -16,7 +16,7 @@ Las interfaces es bueno tenerlas a parte para así compartir con el resto del pr
 
 */
 const ELEMENT_DATA: listadoProfes[] = [
-  {name: 'Luismi' ,modulo: 'SGE',edad :65,sexo :'Masculino'},
+  {name: 'Luismi' ,modulo: 'SGE',edad :85 ,sexo :'Masculino'},
   {name: 'Luismi', modulo: 'PSP',edad :40,sexo :'Masculino'},
   {name: 'Luismi', modulo: 'AD',edad :40,sexo :'Femenino'},
   {name: 'Miguel Campos',modulo: 'PMYDM',edad :40,sexo :'Masculino'},

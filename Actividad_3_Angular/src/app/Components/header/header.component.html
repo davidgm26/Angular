@@ -5,7 +5,7 @@
       abierto ? "expand_more" : "expand_less"
     }}</mat-icon>
   </span>
-  <p [hidden]="abierto">
+  <p *ngIf="abierto" style="background-color:white">
     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse ullam rerum
     reprehenderit sint corrupti magnam optio, in harum libero veritatis enim
     voluptas ipsa! Amet at nostrum unde doloremque, provident fugiat!
