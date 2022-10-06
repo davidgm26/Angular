@@ -3,14 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialImportsModule } from './modulos/material-imports.module';
-import { ListaProfesComponent } from './components/lista-profes/lista-profes.component';
+import { MaterialImportsModule } from './modules/material-imports.module';
 import { HttpClientModule } from '@angular/common/http';
+import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaProfesComponent
+    PokemonListComponent
   ],
   imports: [
     BrowserModule,

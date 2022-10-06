@@ -6,11 +6,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialImportsModule } from './modulos/material-imports.module';
 import { ListadoAlumnosComponent } from './componentes/listado-alumnos/listado-alumnos.component';
 import { FormsModule } from '@angular/forms';
+import { StorageComponent } from './componentes/storage/storage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListadoAlumnosComponent
+    ListadoAlumnosComponent,
+    StorageComponent
   ],
   imports: [
     BrowserModule,

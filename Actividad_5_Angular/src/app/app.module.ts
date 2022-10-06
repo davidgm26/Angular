@@ -4,19 +4,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialImportsModule } from './modulos/material-imports.module';
-import { ListaProfesComponent } from './components/lista-profes/lista-profes.component';
-import { HttpClientModule } from '@angular/common/http';
+import { ComidaComponent } from './componentes/comida/comida.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaProfesComponent
+    ComidaComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
     BrowserAnimationsModule,
-    MaterialImportsModule
+    MaterialImportsModule,
+    FormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

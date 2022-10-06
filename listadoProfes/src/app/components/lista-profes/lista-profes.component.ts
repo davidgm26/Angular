@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Profesores_fake } from '../models/fake_data';
+import { Profesores_fake } from '../../models/fake_data';
 
-
+/*
 export interface listadoProfes {
   name: string;
   modulo: String;
@@ -10,11 +10,10 @@ export interface listadoProfes {
 }
 
 
-/*
 
 Las interfaces es bueno tenerlas a parte para así compartir con el resto del programa
 
-*/
+
 const ELEMENT_DATA: listadoProfes[] = [
   {name: 'Luismi' ,modulo: 'SGE',edad :85 ,sexo :'Masculino'},
   {name: 'Luismi', modulo: 'PSP',edad :40,sexo :'Masculino'},
@@ -25,7 +24,7 @@ const ELEMENT_DATA: listadoProfes[] = [
   {name: 'Jesús Casanova', modulo: 'EIE',edad :40,sexo :'Femenino'}
 ];
 
-
+*/
 
 @Component({
   selector: 'app-lista-profes',

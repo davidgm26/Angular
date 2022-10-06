@@ -8,29 +8,37 @@ export interface listadoAlums {
 }
 
 const ELEMENT_DATA: listadoAlums[] = [
-  { name: 'Mario', surname: 'Ruiz',birthdate: "05/08/2002",curse: '1º DAM'},
-  { name: 'Antonio', surname: 'Ruiz',birthdate: "05/08/2002",curse: '1º DAM'},
-  { name: 'Jose', surname: 'Ruiz',birthdate: "05/08/2002",curse: '1º DAM'}
+  { name: 'Mario', surname: 'Ruiz', birthdate: '05/08/2002', curse: '1º DAM' },
+  {
+    name: 'Antonio',
+    surname: 'Ruiz',
+    birthdate: '05/08/2002',
+    curse: '1º DAM',
+  },
+  { name: 'Jose', surname: 'Ruiz', birthdate: '05/08/2002', curse: '1º DAM' },
 ];
-
 
 @Component({
   selector: 'app-listado-alumnos',
   templateUrl: './listado-alumnos.component.html',
-  styleUrls: ['./listado-alumnos.component.css']
+  styleUrls: ['./listado-alumnos.component.css'],
 })
 export class ListadoAlumnosComponent implements OnInit {
-
-  checkedNombre = false ;
-  checkedApellido = false ;
-
   displayedColumns: string[] = ['name', 'surname', 'birthdate', 'curse'];
   listado = ELEMENT_DATA;
 
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  changeVisibility(columna: string) {
+    debugger;
+    let indice = this.displayedColumns.indexOf(columna);
+
+    if (indice == -1) {
+      this.displayedColumns.push(columna);
+    }else{
+      this.displayedColumns.splice(indice, 1);
+    }
   }
-
 }
