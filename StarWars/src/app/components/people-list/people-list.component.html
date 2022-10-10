@@ -3,18 +3,16 @@
   <mat-card class="carta" *ngFor="let people of peopleList">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>{{people.name}}</mat-card-title>
-      <mat-card-subtitle>{{people.gender}}</mat-card-subtitle>
+      <mat-card-title>{{ people.name }}</mat-card-title>
+      <mat-card-subtitle>{{ people.gender }}</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image [src]="getPhotoURL(people)" alt="Photo of a Shiba Inu">
+    <img
+      mat-card-image
+      [src]="getPhotoURL(people)"
+      alt="Photo of a Shiba Inu"
+    />
     <mat-card-content>
-      <div *ngFor="let pelicula of listadoPeliculas">
-        <div *ngIf="pelicula.characters.includes(people.url)">
-        <p>{{pelicula.title}}</p>
-        </div>
-      </div>
+      <button mat-button (click)="openDialog()">Open dialog</button>
     </mat-card-content>
   </mat-card>
 </div>
-
-

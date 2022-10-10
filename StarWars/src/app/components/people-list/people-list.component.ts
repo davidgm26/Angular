@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Film } from 'src/app/interfaces/filmsResponse.interfaces';
 import { People } from 'src/app/interfaces/peopleResponse.interface';
+import { FilmService } from 'src/app/services/film.service';
 import { PeopleService } from 'src/app/services/people.service';
+import { FilmsListDialogComponent } from '../films-list-dialog/films-list-dialog.component';
 
 @Component({
   selector: 'app-people-list',
@@ -15,8 +18,12 @@ export class PeopleListComponent implements OnInit {
 
   listadoPeliculas: Film[] = [];
 
+  filmSelected: Film | undefined;
+
   constructor(
     private peopleService: PeopleService,
+    private dialog: MatDialog,
+    private filmService: FilmService
 
     ) {}
 
@@ -33,6 +40,14 @@ export class PeopleListComponent implements OnInit {
     return `https://starwars-visualguide.com/assets/img/characters/${
       p.url.split('/')[5]
     }.jpg`;
+  }
+
+  openDialog(film:Film){
+    this.dialog.open(FilmsListDialogComponent,{
+      data: {
+        titulo:film.title
+      }
+      })
   }
 
 }
