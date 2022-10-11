@@ -6,17 +6,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { MaterialImportsModule } from './modules/material-imports.module';
 import { SpeciesListComponent } from './components/species-list/species-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SpeciesListComponent
+    SpeciesListComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     NgxPaginationModule,
-    MaterialImportsModule
+    MaterialImportsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

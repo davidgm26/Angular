@@ -1,0 +1,24 @@
+#tarjeta {
+  list-style: none;
+  float: left;
+  color: white;
+}
+
+#tarjeta img {
+  padding: 5px;
+}
+
+#paginacion button {
+  padding: 1%;
+    
+}
+
+#paginacion #tittle{
+    color: yellow;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+}
+
+#paginacion{
+    margin-left: 48px;
+}

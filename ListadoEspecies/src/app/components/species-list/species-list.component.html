@@ -1,1 +1,14 @@
-<p>species-list works!</p>
+<app-header></app-header>
+<div class="contenedor">
+  <div id="paginacion">
+    <p id="tittle">Species</p>
+    <span *ngFor="let in of counter(); let i = index"
+      ><button (click)="getSpeciePage(i + 1)">{{ i + 1 }}</button>&nbsp;</span>
+  </div>
+  <ul style="margin: auto">
+    <div *ngFor="let specie of listadoSpecies" id="tarjeta">
+        <img [src]="getPhotoURL(specie)"  alt=""/>
+        <li><p>Nombre de la especie: {{specie.name }}</p></li>    
+    </div>
+  </ul>
+</div>
