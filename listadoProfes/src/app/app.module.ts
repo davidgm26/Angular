@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialImportsModule } from './modulos/material-imports.module';
 import { ListaProfesComponent } from './components/lista-profes/lista-profes.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MaterialImportsModule
+    MaterialImportsModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

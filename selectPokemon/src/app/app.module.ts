@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PokemonComponent } from './components/pokemon/pokemon.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialImportsModule } from './modules/material-imports.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,9 @@ import { MaterialImportsModule } from './modules/material-imports.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MaterialImportsModule
+    MaterialImportsModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

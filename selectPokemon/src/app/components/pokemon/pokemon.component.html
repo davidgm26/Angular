@@ -1,11 +1,10 @@
 <mat-form-field appearance="fill">
-  <mat-label >Select an option</mat-label>
-  <mat-select [(value)]="selected">
-    <mat-option *ngFor="let poke of pokemones">{{poke.name}}</mat-option>
-
-
+  <mat-label>Select an option</mat-label>
+  <mat-select [(ngModel)]="selected">
+    <mat-option [value]="poke" *ngFor="let poke of pokemones">{{
+      poke.name
+    }}</mat-option>
   </mat-select>
+  <img [src]="getPhotoURL()" alt="" *ngIf="selected" />
 </mat-form-field>
-
-
-<p>You selected:{{selected}}</p>
+<p *ngIf="selected">Your selection: {{ selected.name }}</p>

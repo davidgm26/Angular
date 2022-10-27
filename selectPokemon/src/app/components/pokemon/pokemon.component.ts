@@ -8,7 +8,7 @@ import { PokemonService } from 'src/app/services/pokemon.service';
   styleUrls: ['./pokemon.component.css'],
 })
 export class PokemonComponent implements OnInit {
-  selected = '';
+  selected!: Pokemon;
   pokemones: Pokemon[] = [];
   constructor(private pokemonService: PokemonService) {}
 
@@ -18,7 +18,10 @@ export class PokemonComponent implements OnInit {
     });
   }
 
-
+  getPhotoURL(): String{
+    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
+this.selected.url.split('/')[6]}.png`;
+  }
   }
 
 
