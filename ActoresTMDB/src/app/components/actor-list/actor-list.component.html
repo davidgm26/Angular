@@ -1,3 +1,13 @@
-<div *ngFor="let actor of listaActores">
+<app-header></app-header>
+<div class="navigate">
+  <mat-button-toggle-group name="paginacionActores" aria-label="Paginación de actores" class="pagination">
+      <mat-button-toggle [disabled]="page == 1" (click)="getActorsPage(page-1)">&#60;</mat-button-toggle>
+      <mat-button-toggle [checked]="page == i+1" *ngFor="let pagina of contadorPaginas(); let i = index" (click)="getActorsPage(i+1)">{{i+1}}</mat-button-toggle>
+      <mat-button-toggle [disabled]="page == 30" (click)="getActorsPage(page+1)">&#62;</mat-button-toggle>
+  </mat-button-toggle-group>
+</div>
+<div *ngFor="let actor of listaActores" style="float: left; margin: 20px;">
 <p>{{actor.name}}    {{actor.id}}</p>
+<img [src]="getActorPhoto(actor)" onerror="this.src='https://images.hive.blog/p/YpihifdXP4WNbGMdjw7e3DuhJWBvCw4SfuLZsrnJYHEpsqZFkiGGNCQDjARFNbziVgPQ8u8C8ZxBkWry1BGDcMPZKLV38JyYuGuLoZzVxW1ykgqw44hzmou5gb6WTjZebNjYRp6wFfpp9cPa2vLwcnV4pqqJ78K3PoNyRRUMwtp6?format=match&mode=fit'"
+ alt={{actor.name}}>
 </div>

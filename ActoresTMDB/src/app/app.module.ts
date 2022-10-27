@@ -8,12 +8,14 @@ import { ActorCardComponent } from './components/actor-card/actor-card.component
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialImportsModule } from './modules/material-imports.module';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ActorListComponent,
-    ActorCardComponent
+    ActorCardComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
