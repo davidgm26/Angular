@@ -14,7 +14,7 @@ pages = 0;
 
 listaActores: Actor[]=[];
 
-  constructor(private ActorService:ActorService) { }
+  constructor(private ActorService: ActorService) { }
 
   ngOnInit(): void {
 
@@ -23,21 +23,15 @@ listaActores: Actor[]=[];
   }
 
   getActorsPage(page:number){
-    this.page = page
     this.ActorService.getAllActors(page).subscribe(resp=>{
-      this.listaActores=resp.results
-      this.pages = Math.ceil(resp.total_pages / 40)
-
+      this.page = page;
+      this.pages = resp.total_pages;
+      this.listaActores=resp.results;
     });
   }
 
   contadorPaginas() {
     return Array(this.pages);
-  }
-
-
-  getActorPhoto(actor: Actor){
-    return `https://image.tmdb.org/t/p/w500/${actor.profile_path}`
   }
 
 }
