@@ -9,13 +9,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialImportsModule } from './modules/material-imports.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './components/header/header.component';
+import { InfoDialogComponent } from './components/info-dialog/info-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ActorListComponent,
     ActorCardComponent,
-    HeaderComponent
+    HeaderComponent,
+    InfoDialogComponent,
   ],
   imports: [
     BrowserModule,
