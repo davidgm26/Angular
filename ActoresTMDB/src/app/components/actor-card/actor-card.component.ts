@@ -28,7 +28,7 @@ export class ActorCardComponent implements OnInit {
 
   getActorFilms() {
     for (let peli of this.actor.known_for) {
-      this.pelisActor.push(peli.title!);
+      this.pelisActor.push(peli.title? peli.title!: peli.original_name!);
     }
     return this.pelisActor;
   }

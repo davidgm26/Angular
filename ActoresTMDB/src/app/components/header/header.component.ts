@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  approved = false;
+
   constructor() { }
 
   ngOnInit(): void {
+    localStorage.getItem('session_id')
   }
 
 }

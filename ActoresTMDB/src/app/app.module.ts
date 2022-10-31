@@ -10,6 +10,8 @@ import { MaterialImportsModule } from './modules/material-imports.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './components/header/header.component';
 import { InfoDialogComponent } from './components/info-dialog/info-dialog.component';
+import { LoginComponent } from './components/login/login.component';
+import { LandingComponent } from './components/landing/landing.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { InfoDialogComponent } from './components/info-dialog/info-dialog.compon
     ActorCardComponent,
     HeaderComponent,
     InfoDialogComponent,
+    LoginComponent,
+    LandingComponent,
   ],
   imports: [
     BrowserModule,
