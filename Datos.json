@@ -13261,5 +13261,7 @@
             "IDProvincia": "23",
             "IDCCAA": "01"
         }
-    ]
+    ],
+    "Nota": "Archivo de todos los productos en todas las estaciones de servicio. La actualización de precios se realiza cada media hora, con los precios en vigor en ese momento.",
+    "ResultadoConsulta": "OK"
 }
