@@ -1,0 +1,10 @@
+<a routerLink="/pokemon/{{id}}" style="text-decoration:none ;">
+  <div class="card 1">
+    <div class="card_title title-white">
+      <p style="color: black">{{ pokemon.name }}</p>
+    </div>
+    <div class="card_image">
+      <img [src]="getPokemonPhoto()" />
+    </div>
+  </div>
+</a>
