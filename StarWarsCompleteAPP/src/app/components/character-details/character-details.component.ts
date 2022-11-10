@@ -48,22 +48,22 @@ export class CharacterDetailsComponent implements OnInit {
       this.character = respuesta;
       this.planetService.getCharacterPlanet(respuesta.homeworld).subscribe(respuesta => {
         this.characterPlanet = respuesta;
-      });      
-      
+      });
+
       this.speciesService.getCharacterSpecies(respuesta.species).forEach(especie => {
         especie.subscribe(respuesta => {
           this.characterSpeciesList.push(respuesta);
         });
       });
-      
+
       this.getPeliculasPersonaje();
-      
+
       this.vehicleService.getCharacterVehicles(respuesta.vehicles).forEach(vehiculo => {
         vehiculo.subscribe(respuesta => {
           this.characterVehicleList.push(respuesta);
         });
       });
-      
+
       this.starshipService.getCharacterStarships(respuesta.starships).forEach(nave => {
         nave.subscribe(respuesta => {
           this.characterStarshipList.push(respuesta);
@@ -71,9 +71,9 @@ export class CharacterDetailsComponent implements OnInit {
       });
 
     })
-    
-    
-    
+
+
+
   }
 
   getFotoPersonaje() {
@@ -97,7 +97,7 @@ export class CharacterDetailsComponent implements OnInit {
     this.idFilm = pelicula.url.split('/')[5]
     return `https://starwars-visualguide.com/assets/img/films/${this.idFilm}.jpg`
   }
-  
+
   getFotoVehiculo(vehiculo: Vehicle) {
     return `https://starwars-visualguide.com/assets/img/vehicles/${vehiculo.url.split('/')[5]}.jpg`;
 

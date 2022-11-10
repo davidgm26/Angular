@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialImportsModule } from './material-imports/material-imports.module';
+import { MaterialImportsModule } from './modules/material-imports.module';
 
 
 import { AppComponent } from './app.component';
