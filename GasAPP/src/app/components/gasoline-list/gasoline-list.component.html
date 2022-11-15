@@ -1,9 +1,19 @@
+<h4>Escoge el tipo de gasolina</h4>
+<mat-slider
+  thumbLabel
+  [displayWith]="formatLabel"
+  tickInterval="1000"
+  step="1000"
+  min="0"
+  max="100000"
+  aria-label="units"></mat-slider>
 <mat-form-field appearance="fill">
-  <mat-label>Choose an option</mat-label>
-  <select matNativeControl>
-    <option *ngFor="let gasolina of fuelName" [(ngModel)]="seleccion" value="{{gasolina}}">{{gasolina}}</option>
-  </select>
+  <mat-label>Tipo de Gasolina</mat-label>
+  <mat-select [(ngModel)]="seleccion" name="gasolina">
+    <mat-option *ngFor="let gasolina of fuelName" value="{{gasolina}}">{{gasolina}}</mat-option>
+  </mat-select>
 </mat-form-field>
+<p> Gasolina seleccionada: {{seleccion}} </p>
 <div style="height: 85% ; width: 85%;">
   <app-gasoline-card *ngFor="let gasolinera of listaGasolineras" [gasolinera]="gasolinera" [seleccionado]="seleccion"
     style="margin:5px; float:right ;"></app-gasoline-card>

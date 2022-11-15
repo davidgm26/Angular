@@ -2,11 +2,14 @@
   <mat-card-title style="">{{gasolinera['Rótulo']}}</mat-card-title>
     <mat-card-subtitle style="size:0.5em ;">{{gasolinera.Localidad}}</mat-card-subtitle>
   <mat-card-content>
-    <div *ngIf="seleccionado == 'Gasóleo A'">
-      <p>Gasóleo A: {{gasolinera['Precio Gasoleo A']}} €</p>
+    <div>
+      <p *ngIf="seleccionado=='Gasóleo A' ">Gasóleo A: {{gasolinera['Precio Gasoleo A']}} €</p>
     </div>
-    <div *ngIf="seleccionado == 'Biodiesel'">
-      <p>Biodiesel: {{gasolinera['Precio Gasolina 95 E5 Premium']}} €</p>
+    <div>
+      <p *ngIf="seleccionado=='Gasolina 95 E5' ">Gasolina 95 E5: {{gasolinera['Precio Gasolina 95 E5 Premium']}} €</p>
+    </div>
+    <div>
+      <p *ngIf="seleccionado=='Hidrógeno' ">Hidrógeno: {{gasolinera['Precio Hidrogeno']}} €</p>
     </div>
   </mat-card-content>
 </mat-card>

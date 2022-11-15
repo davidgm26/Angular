@@ -12,22 +12,16 @@ export class GasolineListComponent implements OnInit {
   fuels = new FormControl('');
   seleccion: string ='';
   listaGasolineras: FuelStationResponse[] = [];
+  listaGasolinerasFiltradas: FuelStationResponse [] =[];
   fuelName: string[] = [
-    'Biodesel',
-    'Bioetanol',
-    'Gas Natural Comprimido',
-    'Gas Natural Licuado',
-    'Gases Licuados del Petróleo',
     'Gasóleo A',
-    'Gasóleo B',
-    'Gasóleo Premium',
-    'Gasolina 95 E10',
     'Gasolina 95 E5',
-    'Gasolina 95 E5 Premium',
-    'Gasolina 98 E10',
-    'Gasolina 98 E5',
     'Hidrógeno',
   ];
+  max = 0;
+  precioBiodiesel: number = 0;
+  precioGasoleo: number = 0;
+  precioGasolina: number = 0;
 
   constructor(private gasolineraService: GasolineService) {}
 
@@ -39,9 +33,17 @@ export class GasolineListComponent implements OnInit {
     this.gasolineraService.getAllFuelStation().subscribe((resp) => {
       this.listaGasolineras = resp.ListaEESSPrecio;
     });
+
   }
 
-  getMinPrice(){
 
+  formatLabel(value: number) {
+    if (value >= 1000) {
+      return Math.round(value / 1000) + 'k';
+    }
+
+    return value;
   }
 }
+
+
