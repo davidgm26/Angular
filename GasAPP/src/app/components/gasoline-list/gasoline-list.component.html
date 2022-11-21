@@ -6,7 +6,23 @@
   </mat-select>
 </mat-form-field>
 <p> Gasolina seleccionada: {{seleccion}} </p>
+
+<mat-form-field appearance="fill">
+  <mat-label>Provincia</mat-label>
+  <mat-select [(ngModel)]="provinciaSelected" (selectionChange)="getFilteredFuelStationPorProvincia()" name="gasolina">
+    <mat-option *ngFor="let provincia of listaProvincias" [value]="provincia">{{provincia.Provincia}}</mat-option>
+  </mat-select>
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill">
+  <mat-label>Municipio</mat-label>
+  <mat-select [(ngModel)]="municipioSelected" (selectionChange)="getFilteredFuelStationPorProvincia()" name="gasolina">
+    <mat-option *ngFor="let municipio of listaMunicipios" value="{{municipio}}">{{municipio.Municipio}}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+
 <div style="height: 85% ; width: 85%;">
-  <app-gasoline-card *ngFor="let gasolinera of listaGasolineras" [gasolinera]="gasolinera" [seleccionado]="seleccion"
+  <app-gasoline-card *ngFor="let gasolinera of listaGasolinerasFiltradas" [gasolinera]="gasolinera" [seleccionado]="seleccion"
     style="margin:5px; float:right ;"></app-gasoline-card>
 </div>
