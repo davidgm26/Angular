@@ -26,12 +26,15 @@ export class GasolineListComponent implements OnInit {
   precioGasolina: number = 0;
   listaProvincias: ProvinciaResponse[] = [];
   listaMunicipios: MunicipioResponse[] = [];
+  myControl = new FormControl();
+
 
   constructor(
     private gasolineraService: GasolineService,
     private provinciaService: ProvinciaService,
     private municipioService: MunicipioService
   ) {}
+
 
   ngOnInit(): void {
     this.getProvinciaList();
@@ -67,11 +70,16 @@ export class GasolineListComponent implements OnInit {
     console.log(this.listaGasolinerasFiltradas);
   }
 
+  getFilteredFuelStationPorMunicipio() {
+    debugger;
+    this.listaGasolinerasFiltradas = this.listaGasolineras.filter((gas) => gas['Municipio'] == this.municipioSelected.Municipio);
+  }
+
   getMunicipioPorProvincia() {
     this.municipioService
       .getAllMunicipiosPorProvincia(this.provinciaSelected.IDPovincia)
       .subscribe((resp) => {
-        resp = this.listaMunicipios;
+       this.listaMunicipios = resp
       });
   }
 }
