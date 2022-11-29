@@ -9,12 +9,14 @@ import { GasolineCardComponent } from './components/gasoline-card/gasoline-card.
 import { MaterialImportsModule } from 'src/modules/material-imports.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GoogleMapsModule } from '@angular/google-maps';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     GasolineListComponent,
-    GasolineCardComponent
+    GasolineCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,6 +26,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    GoogleMapsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

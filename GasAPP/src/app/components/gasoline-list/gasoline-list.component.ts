@@ -82,4 +82,6 @@ export class GasolineListComponent implements OnInit {
        this.listaMunicipios = resp
       });
   }
+
+  
 }

@@ -17,32 +17,6 @@
 
 <br>
 
-<!-- <mat-form-field>
-  <input type="text" placeholder="Enter Location" matInput [formControl]="myControl"
-       [matAutocomplete]="auto">
-     <mat-autocomplete #auto="matAutocomplete">
-       <mat-option *ngFor="let municipio of listaMunicipios" [value]="municipio">{{municipio.Municipio}}</mat-option>
-  </mat-autocomplete>
-</mat-form-field> -->
-
-
-
-
-<!-- <mat-form-field class="example-full-width" appearance="fill">
-  <mat-label>Number</mat-label>
-  <input type="text"
-         placeholder="Pick one"
-         aria-label="Number"
-         matInput
-         [formControl]="myControl"
-         [matAutocomplete]="auto">
-  <mat-autocomplete #auto="matAutocomplete">
-    <mat-option *ngFor="let municipio of listaMunicipios | async" [value]="municipio">
-      {{option}}
-    </mat-option>
-  </mat-autocomplete>
-</mat-form-field> -->
-
 <mat-form-field appearance="fill">
   <mat-label>Municipio</mat-label>
   <mat-select [(ngModel)]="municipioSelected" (selectionChange)="getFilteredFuelStationPorMunicipio()" name="gasolina">
